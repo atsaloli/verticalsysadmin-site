@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Vertical Sysadmin, Inc.</title>
+    <link>https://verticalsysadmin.com/tags/</link>
+    <description>Recent content in Tags on Vertical Sysadmin, Inc.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 13 Nov 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://verticalsysadmin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Centos</title>
+      <link>https://verticalsysadmin.com/tags/centos/</link>
+      <pubDate>Sun, 13 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/tags/centos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Postgres</title>
+      <link>https://verticalsysadmin.com/tags/postgres/</link>
+      <pubDate>Sun, 13 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/tags/postgres/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Postgresql</title>
+      <link>https://verticalsysadmin.com/tags/postgresql/</link>
+      <pubDate>Sun, 13 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/tags/postgresql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vagrant</title>
+      <link>https://verticalsysadmin.com/tags/vagrant/</link>
+      <pubDate>Sun, 13 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/tags/vagrant/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Virtual-Box</title>
+      <link>https://verticalsysadmin.com/tags/virtual-box/</link>
+      <pubDate>Sun, 13 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/tags/virtual-box/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Yum</title>
+      <link>https://verticalsysadmin.com/tags/yum/</link>
+      <pubDate>Sun, 13 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/tags/yum/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

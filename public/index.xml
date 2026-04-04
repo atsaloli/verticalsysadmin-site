@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Vertical Sysadmin, Inc.</title>
+    <link>https://verticalsysadmin.com/</link>
+    <description>Recent content on Vertical Sysadmin, Inc.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://verticalsysadmin.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting up CI/CD Pipelines Course</title>
+      <link>https://verticalsysadmin.com/blog/2017-09-15-setting-up-cicd-pipelines-course/</link>
+      <pubDate>Fri, 15 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2017-09-15-setting-up-cicd-pipelines-course/</guid>
+      <description>&lt;p&gt;Announcing training opportunities for a CI/CD pipelines course. Scheduled at Ohio LinuxFest in Columbus on September 29th and USENIX LISA in San Francisco on October 31st. Colleague Mike Weilgart was teaching &amp;ldquo;Git Foundations: Unlocking the Mysteries&amp;rdquo; at both venues. Available for training and consulting engagements — contact &lt;a href=&#34;mailto:hello@verticalsysadmin.com&#34;&gt;hello@verticalsysadmin.com&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sysadmin War Story: &#34;The Network Ate My Font!&#34;</title>
+      <link>https://verticalsysadmin.com/blog/2017-09-13-sysadmin-war-story-the-network-ate-my-font/</link>
+      <pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2017-09-13-sysadmin-war-story-the-network-ate-my-font/</guid>
+      <description>&lt;p&gt;Finance offices in Toronto and Hollywood were printing checks to separate printers. Toronto produced correct MICR font (Magnetic Ink Character Recognition); Hollywood printed those same numbers in regular font. The finance team blamed the network for &amp;ldquo;eating&amp;rdquo; the MICR font.&lt;/p&gt;
+&lt;p&gt;The author captured PostScript data via tcpdump and found the PostScript referenced the font without embedding it. The check editor had an &amp;ldquo;encapsulate fonts&amp;rdquo; checkbox that was unchecked. The Hollywood printer had cached the font from earlier check images that did include it. When Toronto&amp;rsquo;s printer was rebooted for maintenance, its font cache cleared — revealing the underlying problem.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What I Learned at LISA 2016 Conference</title>
+      <link>https://verticalsysadmin.com/blog/2016-12-18-what-i-learned-at-lisa-2016-conference/</link>
+      <pubDate>Sun, 18 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2016-12-18-what-i-learned-at-lisa-2016-conference/</guid>
+      <description>&lt;p&gt;Attended LISA 2016 in Boston, exhibiting and promoting training services. Strong interest in Machine Learning and Go programming instruction. Shared a success story from &amp;ldquo;Time Management for System Administrators&amp;rdquo; training at Ohio Linux Fest.&lt;/p&gt;
+&lt;p&gt;At the Training Sysadmins Birds of a Feather (BoF) session, learned about Adobe&amp;rsquo;s internal training culture. Received a LOPSA challenge coin for running the Los Angeles chapter.&lt;/p&gt;
+&lt;h2 id=&#34;top-three-learnings&#34;&gt;Top Three Learnings&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Jupyter Notebook&lt;/strong&gt; — discovered through a Machine Learning presentation&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unikernels&lt;/strong&gt; — emerging technology discussion&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SRE Practices&lt;/strong&gt; — closing keynote &amp;ldquo;SRE in the Small and in the Large&amp;rdquo; showed SRE benefits organizations of all sizes&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Jane Adams&amp;rsquo; keynote on emergence in complex systems was also highlighted as especially memorable.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Setting up a Postgres Sandbox</title>
+      <link>https://verticalsysadmin.com/blog/2016-11-13-setting-up-a-postgres-sandbox/</link>
+      <pubDate>Sun, 13 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2016-11-13-setting-up-a-postgres-sandbox/</guid>
+      <description>&lt;p&gt;Demonstrates creating a reproducible PostgreSQL development environment using Vagrant and VirtualBox.&lt;/p&gt;
+&lt;h2 id=&#34;steps&#34;&gt;Steps&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Install Vagrant and VirtualBox&lt;/li&gt;
+&lt;li&gt;Choose a base image (puppetlabs/centos-6.6-64-nocm)&lt;/li&gt;
+&lt;li&gt;Create a directory and initialize Vagrant&lt;/li&gt;
+&lt;li&gt;Download PostgreSQL 9.3 repository packages via wget, store RPMs in /vagrant/packages for persistence&lt;/li&gt;
+&lt;li&gt;Modify the Vagrantfile to automate database initialization&lt;/li&gt;
+&lt;li&gt;Destroy and recreate the VM to verify reproducibility&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The automation script initializes PostgreSQL, creates a vagrant user with appropriate permissions, and enables the service. Users can then access PostgreSQL via psql. The approach allows repeating &amp;ldquo;destroy VM, bring it up, and start psql&amp;rdquo; as often as needed for a clean slate.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bootstrapping CFEngine Agent to a Regional AWS Hub</title>
+      <link>https://verticalsysadmin.com/blog/2016-10-26-bootstrapping-cfengine-agent-to-a-regional-aws-hub/</link>
+      <pubDate>Wed, 26 Oct 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2016-10-26-bootstrapping-cfengine-agent-to-a-regional-aws-hub/</guid>
+      <description>&lt;p&gt;DevOps engineer Joaquin Menchaca provided this one-liner for determining an AWS region from within a VM:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;AWS_REGION=$(curl -s http://169.254.169.254/latest/meta-data/placement/availability-zone | sed -e &amp;#39;s/[a-z]$//&amp;#39;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It queries instance metadata to identify which AWS region the VM is in. Useful when bootstrapping Kubernetes VMs to connect to the appropriate regional CFEngine hub — so each instance communicates with its nearest local hub.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Looking up Postgres Table Name by ID</title>
+      <link>https://verticalsysadmin.com/blog/2016-10-24-looking-up-postgres-table-name-by-id/</link>
+      <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2016-10-24-looking-up-postgres-table-name-by-id/</guid>
+      <description>&lt;p&gt;When working with TOAST tables in PostgreSQL, you sometimes need to identify a table by its relation ID rather than its name. SQL query:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; relid, relname &lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; pg_catalog.pg_statio_user_tables &lt;span style=&#34;color:#66d9ef&#34;&gt;WHERE&lt;/span&gt; relid &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;19665&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Queries PostgreSQL&amp;rsquo;s system catalog using the relation ID to return the table name.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Safely Updating /etc/sudoers Non-Interactively</title>
+      <link>https://verticalsysadmin.com/blog/2016-10-19-safely-editing-etcsudoers-with-an-external-script/</link>
+      <pubDate>Wed, 19 Oct 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2016-10-19-safely-editing-etcsudoers-with-an-external-script/</guid>
+      <description>&lt;p&gt;Describes updating /etc/sudoers in batch mode while retaining visudo&amp;rsquo;s safety features (file-locking, syntax checking, automatic rollback). Needed to add an account across multiple servers using Ansible.&lt;/p&gt;
+&lt;p&gt;Solution: set the VISUAL environment variable to a custom ex-based command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;grep -q ^tsalolia /etc/sudoers &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; VISUAL&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;(echo /^root; echo a; echo &amp;#39;tsalolia ALL=(ALL) ALL&amp;#39;; echo .; echo &amp;#39;g/^#tsalolia/d&amp;#39;; echo &amp;#39;x!&amp;#39;) | ex - /etc/sudoers&amp;#34;&lt;/span&gt; visudo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Long-term plan: templatize /etc/sudoers across the org, then simply use &lt;code&gt;VISUAL=&amp;quot;cp /etc/sudoers.new /etc/sudoers&amp;quot; visudo&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Introducing Infrastructure Inventory with CFEngine Enterprise</title>
+      <link>https://verticalsysadmin.com/blog/2016-10-05-infastructure-inventory-with-cfengine-enterprise/</link>
+      <pubDate>Wed, 05 Oct 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2016-10-05-infastructure-inventory-with-cfengine-enterprise/</guid>
+      <description>&lt;p&gt;Setting up involves spinning up a hub and installing lightweight agents on hosts, then running a bootstrap command. The system automatically discovers hostname, address, OS version, disk utilization, installed packages, etc. The agent refreshes inventory every 5–10 minutes.&lt;/p&gt;
+&lt;p&gt;Reporting UI capabilities: building charts and graphs, applying filters, custom report builder. Inventory is extensible via arbitrary external shell script or binary. Supports exporting to PDFs and CSVs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CFEngine Inventory of Windows Server 2012</title>
+      <link>https://verticalsysadmin.com/blog/2016-10-03-cfengine-inventory-of-windows-server-2012/</link>
+      <pubDate>Mon, 03 Oct 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2016-10-03-cfengine-inventory-of-windows-server-2012/</guid>
+      <description>&lt;p&gt;Building a centralized reporting portal for CFEngine Enterprise. CFEngine inventory on Windows collects: hostname, OS version, system manufacturer, disk utilization, hardware/IPv4 addresses, BIOS and architecture info, CFEngine version, unique ID, system uptime, serial number.&lt;/p&gt;
+&lt;p&gt;Technical note: after deploying a Windows Server 2012 VM in Joyent public cloud and bootstrapping it to the CFEngine hub, the hub couldn&amp;rsquo;t collect reports until port 5308 was opened in Windows Firewall with Advanced Security.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>&#34;You Think Our Training is Expensive?&#34;</title>
+      <link>https://verticalsysadmin.com/blog/2016-09-08-you-think-our-training-is-expensive/</link>
+      <pubDate>Thu, 08 Sep 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2016-09-08-you-think-our-training-is-expensive/</guid>
+      <description>&lt;p&gt;Vertical Sysadmin charges $3,000/day plus a $2,000 admin fee for on-site training (up to 12 participants). Countering pricing objections by quoting Red Adair: &amp;ldquo;If you think it&amp;rsquo;s expensive to hire a professional to do the job, wait until you hire an amateur.&amp;rdquo;&lt;/p&gt;
+&lt;h2 id=&#34;training-methodology&#34;&gt;Training Methodology&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Active monitoring of student comprehension&lt;/li&gt;
+&lt;li&gt;Modular progression — don&amp;rsquo;t advance until all participants understand current material&lt;/li&gt;
+&lt;li&gt;Theory-practice balance with hands-on labs after each section&lt;/li&gt;
+&lt;li&gt;Foundational rigor before advancing to intermediate/sophisticated topics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;No attendees reportedly complained about pricing after completing the program.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Graphing within psql</title>
+      <link>https://verticalsysadmin.com/blog/2016-08-14-graphing-within-psql/</link>
+      <pubDate>Sun, 14 Aug 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2016-08-14-graphing-within-psql/</guid>
+      <description>&lt;p&gt;Demonstrates creating graphs from SQL query results directly within psql using gnuplot, without leaving the interface.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Client-side method (Ian Barwick):&lt;/strong&gt; Consolidates preparation steps into a psql script:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;testdb=# set plot_query &amp;#39;SELECT * FROM plot&amp;#39;
+testdb=# i tmp/plot.psql
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Server-side method (Sergey Konoplev):&lt;/strong&gt; Creates a server-side function. With gnuplot on the database server:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;select&lt;/span&gt; just_for_fun_graph(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;select ... from ...&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;My Graph&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;78&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;24&lt;/span&gt;, ...)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Both eliminate the need to export data to external graphing tools.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Binding an SSH Launcher to a GNU Screen Hotkey</title>
+      <link>https://verticalsysadmin.com/blog/2016-08-13-configuring-an-ssh-launcher-window-inside-gnu-screen/</link>
+      <pubDate>Sat, 13 Aug 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2016-08-13-configuring-an-ssh-launcher-window-inside-gnu-screen/</guid>
+      <description>&lt;p&gt;Two lines added to .screenrc:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;A launcher window: &lt;code&gt;screen -t launcher /bin/sh -c &#39;while true; do echo -n &amp;quot;Hostname: &amp;quot;; read host; screen -t $host ssh $host; clear; done&#39;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A keybinding: &lt;code&gt;bindkey &amp;quot;13&amp;quot; select 0&lt;/code&gt; — maps Ctrl-K to switch to the launcher window.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Pressing Ctrl-K and entering a hostname automatically creates a new GNU Screen window titled with that hostname and initiates SSH.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Time Management and Git Training at Ohio Linux Fest</title>
+      <link>https://verticalsysadmin.com/blog/2016-07-29-time-management-and-git-training-at-ohio-linux-fest/</link>
+      <pubDate>Fri, 29 Jul 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2016-07-29-time-management-and-git-training-at-ohio-linux-fest/</guid>
+      <description>&lt;p&gt;Aleksey and Mike Weilgart will deliver professional training at Ohio Linux Fest Institute in October:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Aleksey: &amp;ldquo;Time Management for System Administrators&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Mike Weilgart: &amp;ldquo;Git Foundations: Unlocking the Mysteries&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Personal note about enjoying Columbus, Ohio — particularly its historical significance and German Village.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using Ansible to Change sshd Configuration</title>
+      <link>https://verticalsysadmin.com/blog/2016-07-28-using-ansible-to-change-sshd-configuration/</link>
+      <pubDate>Thu, 28 Jul 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2016-07-28-using-ansible-to-change-sshd-configuration/</guid>
+      <description>&lt;p&gt;A developer asked to activate two SSH config options on multiple servers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ClientAliveInterval 15&lt;/li&gt;
+&lt;li&gt;ClientAliveCountMax 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These help maintain active SSH connections during debugging sessions.&lt;/p&gt;
+&lt;p&gt;Solution: Ansible&amp;rsquo;s raw mode (no Python required on target hosts — executes shell commands directly).&lt;/p&gt;
+&lt;h2 id=&#34;steps&#34;&gt;Steps&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Verify current commented-out settings via grep across all target servers&lt;/li&gt;
+&lt;li&gt;Use sed to uncomment the configuration lines&lt;/li&gt;
+&lt;li&gt;Validate changes were applied&lt;/li&gt;
+&lt;li&gt;Reload sshd: /etc/init.d/sshd reload&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    <item>
+      <title>Infrastructure Management at Scale</title>
+      <link>https://verticalsysadmin.com/blog/2016-07-26-infrastructure-management-at-scale/</link>
+      <pubDate>Tue, 26 Jul 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2016-07-26-infrastructure-management-at-scale/</guid>
+      <description>&lt;p&gt;Presented at the Digital Media Educators Conference (DMEC) for California community colleges. Three core philosophical foundations:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Promise Theory&lt;/strong&gt; — voluntary cooperation and distributed work over direct control&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pull vs. Push Architecture&lt;/strong&gt; — pull-based systems&amp;rsquo; advantages for configuration management&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dunbar Numbers&lt;/strong&gt; — applying relationship limits to constrain infrastructure information presentation. &amp;ldquo;The design of CFEngine uses Dunbar numbers to focus the information it presents.&amp;rdquo;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;CFEngine Enterprise dashboard features: health indicators, alert management (color-coded), compliance tracking, progressive drill-down. Inventory and compliance reporting: custom inventory collection, multi-column sortable tables, pie charts, bar graphs, chart export for management reporting.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CFEngine Enterprise Tip: Showing Hosts with Broken RPM Databases</title>
+      <link>https://verticalsysadmin.com/blog/2016-07-16-cfengine-enterprise-tip-broken-rpm-database/</link>
+      <pubDate>Sat, 16 Jul 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2016-07-16-cfengine-enterprise-tip-broken-rpm-database/</guid>
+      <description>&lt;p&gt;RPM database corruption is a common problem on Red Hat Linux at scale. Custom SQL query for CFEngine Enterprise to identify affected systems:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;select&lt;/span&gt; hosts.hostname,changetimestamp
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;from&lt;/span&gt; promiseexecutions
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;inner&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;join&lt;/span&gt; hosts &lt;span style=&#34;color:#66d9ef&#34;&gt;on&lt;/span&gt; promiseexecutions.hostkey &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; hosts.hostkey
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;where&lt;/span&gt; logmessages::text &lt;span style=&#34;color:#66d9ef&#34;&gt;ilike&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;%rpm%db3%&amp;#39;&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;and&lt;/span&gt; changetimestamp &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;current_timestamp&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;24 hours&amp;#39;&lt;/span&gt;::interval
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;order&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;by&lt;/span&gt; changetimestamp;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Searches the past 24 hours of promise executions for log messages containing &amp;ldquo;rpm&amp;rdquo; and &amp;ldquo;db3&amp;rdquo;, returning hostnames and timestamps.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why I Credit My Career Success to USENIX LISA Training</title>
+      <link>https://verticalsysadmin.com/blog/2016-07-16-why-i-credit-my-career-success-to-usenix-lisa-training/</link>
+      <pubDate>Sat, 16 Jul 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2016-07-16-why-i-credit-my-career-success-to-usenix-lisa-training/</guid>
+      <description>&lt;p&gt;USENIX is the UNIX Users Group established in the 1970s, now a global professional society. LISA (Large Installation System Administration) is their flagship conference: talks, expo hall, social activities, and tutorials.&lt;/p&gt;
+&lt;p&gt;The author credits professional success to USENIX engagement, regular LISA attendance, ongoing training, and conference relationships. Training &amp;ldquo;broadening my knowledge base, increasing my skill set, and making me more valuable as an individual contributor and executive.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Notable instructors: Æleen Frisch (UNIX system administration), Tobias Oetiker (RRDTool), Mark Burgess (CFEngine). The conference is &amp;ldquo;organized by the community — it is truly a conference by sysadmins, for sysadmins.&amp;rdquo; Post concludes with an invitation to LISA 2016 in Boston (December 4–9).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Dumping RPM Metadata</title>
+      <link>https://verticalsysadmin.com/blog/2016-07-11-dumping-rpm-metadata/</link>
+      <pubDate>Mon, 11 Jul 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2016-07-11-dumping-rpm-metadata/</guid>
+      <description>&lt;p&gt;Needed to identify which RPM metadata field stores the &amp;ldquo;el6&amp;rdquo; value visible in package version output. One-liner to dump all available RPM metadata fields:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rpm -q kernel-2.6.32-504.el6.x86_64 --queryformat &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(for&lt;/span&gt; f in &lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;rpm --querytags&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;; &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt; echo &lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt; $f &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; %&lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;f&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt; ; &lt;span style=&#34;color:#66d9ef&#34;&gt;done&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The &amp;ldquo;RELEASE&amp;rdquo; field contains the relevant &amp;ldquo;504.el6&amp;rdquo; value, along with derived fields like EVR, NEVR, NEVRA, and NVR.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Feedback from &#34;Taming the Git Filesystem&#34; Talk (June 2nd, 2016)</title>
+      <link>https://verticalsysadmin.com/blog/2016-06-10-feedback-from-taming-the-git-filesystem-talk/</link>
+      <pubDate>Fri, 10 Jun 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2016-06-10-feedback-from-taming-the-git-filesystem-talk/</guid>
+      <description>&lt;p&gt;Mike Weilgart planned to repeat his &amp;ldquo;Taming the Git Filesystem&amp;rdquo; presentation on June 23rd in Burbank, following its debut on June 2nd at the UUASC-LA/LOPSA-LA meetup.&lt;/p&gt;
+&lt;h2 id=&#34;attendee-feedback&#34;&gt;Attendee Feedback&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Stephen Franklin&lt;/strong&gt; (Systems Engineer): &amp;ldquo;filled out some conceptual holes&amp;rdquo; in his understanding&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Eric White&lt;/strong&gt; (Senior System Engineer): &amp;ldquo;approachable and assumed no prior knowledge&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;George Wu&lt;/strong&gt; (VP of Engineering): addressed gaps in practical Git knowledge&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Eric&lt;/strong&gt; (Community College Student): able to understand the explanations despite limited background&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Jordan Schwartz&lt;/strong&gt; (Systems/Storage Engineer): &amp;ldquo;has something to offer for most git users&amp;rdquo; — &amp;ldquo;not a run of the mill &amp;lsquo;how to use&amp;rsquo; git presentation&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Identifying Critical Unpatched Vulnerabilities on a Red Hat System</title>
+      <link>https://verticalsysadmin.com/blog/2016-05-31-identifying-critical-unpatched-vulnerabilities/</link>
+      <pubDate>Tue, 31 May 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2016-05-31-identifying-critical-unpatched-vulnerabilities/</guid>
+      <description>&lt;p&gt;Working notes for identifying critical unpatched vulnerabilities on RHEL 6.&lt;/p&gt;
+&lt;p&gt;Install the yum-security plugin to list available security updates with associated CVEs and severity ratings:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yum update-info list cves available
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To determine which unpatched CVEs have CVSS scores exceeding 7 (critical threshold): CVSS-scored CVEs are available from the National Vulnerability Database via XML feeds. NIST suggests a one-time import of all main XML vulnerability feeds, then regular updates with modified feeds.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mario Obejas on &#34;a replacement for bash?&#34; and on writing production-grade code</title>
+      <link>https://verticalsysadmin.com/blog/2016-05-29-mario-obejas-on-replacement-for-bash/</link>
+      <pubDate>Sun, 29 May 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2016-05-29-mario-obejas-on-replacement-for-bash/</guid>
+      <description>&lt;p&gt;Mario Obejas (34 years of industry experience) responded to a LOPSA-tech mailing list discussion on bash alternatives.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;On bash replacement:&lt;/strong&gt; Bash will likely only be replaced by an improved iteration (as bash replaced sh, vim replaced vi). &amp;ldquo;Bash works well enough for a lot of production work.&amp;rdquo; Any successor must leverage existing widely-held skill sets.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Real-world example:&lt;/strong&gt; Managing satellite data traffic for NASA&amp;rsquo;s VIIRS ground station with bash scripts capable of recovering from catastrophic three-day outages without data loss — until the 2013 government shutdown disrupted operations for 17 days.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ansible Now Available as an RPM</title>
+      <link>https://verticalsysadmin.com/blog/2016-05-26-ansible-now-available-as-an-rpm/</link>
+      <pubDate>Thu, 26 May 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2016-05-26-ansible-now-available-as-an-rpm/</guid>
+      <description>&lt;p&gt;Ansible is now available through the EPEL (Extra Packages for Enterprise Linux) repository as an RPM. The RPM handles dependency management automatically — no need to manually configure Python packages.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;The RPM provides Ansible version 2.0.2.0 which includes a number of bug fixes including a security one (CVE-2016-3096).&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Installing Ansible pulls in 14 total packages: PyYAML, libyaml, sshpass, and Python libraries (Babel, Crypto, httplib2, Jinja2, Keyczar, Paramiko, others). Total download: ~6.9 MB; installed size: ~33 MB.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Key References for Various Tools</title>
+      <link>https://verticalsysadmin.com/blog/2016-05-12-key-references-for-various-tools/</link>
+      <pubDate>Thu, 12 May 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2016-05-12-key-references-for-various-tools/</guid>
+      <description>&lt;p&gt;Compiled by Mike Weilgart, a newly practicing Linux sysadmin.&lt;/p&gt;
+&lt;h2 id=&#34;bash-and-posix-shell-scripting&#34;&gt;Bash and POSIX Shell Scripting&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Variable quoting: consequences of omitting quotation marks, whitespace/special character effects, quotes and argument parsing&lt;/li&gt;
+&lt;li&gt;Miscellaneous: shells vs. built-in commands, why printf is preferable to echo, why shell loops for text processing are discouraged&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;vi-and-vim&#34;&gt;Vi and Vim&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;Why, oh WHY, do those nutheads use vi?&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Stack Overflow coverage: vim&amp;rsquo;s command language, distinguishing buffers from windows/tabs, effective buffer use&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;git&#34;&gt;Git&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;What branches are conceptually&lt;/li&gt;
+&lt;li&gt;Think Like a Git website (comprehensive resource links)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;cgroups&#34;&gt;Cgroups&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Stack Exchange introductory guide to Linux control groups&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Training Program to Make a Novice System Administrator</title>
+      <link>https://verticalsysadmin.com/blog/2016-05-05-training-program-to-make-a-novice-system-administrator/</link>
+      <pubDate>Thu, 05 May 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2016-05-05-training-program-to-make-a-novice-system-administrator/</guid>
+      <description>&lt;p&gt;A self-paced curriculum for preparing entry-level professionals for Linux sysadmin roles.&lt;/p&gt;
+&lt;h2 id=&#34;part-i--linux-essentials&#34;&gt;Part I – Linux Essentials&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Text: &amp;ldquo;Linux Essentials&amp;rdquo; (2015)&lt;/li&gt;
+&lt;li&gt;Online: Introduction to Linux (LFS101x) via edX&lt;/li&gt;
+&lt;li&gt;Investment: 40–60 hours, ~$26&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;part-ii--the-linux-command-line&#34;&gt;Part II – The Linux Command Line&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Free PDF, 537 pages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;part-iii--linux-system-administration&#34;&gt;Part III – Linux System Administration&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Linux Foundation&amp;rsquo;s Essentials course (LFS201), includes DNS training&lt;/li&gt;
+&lt;li&gt;40–50 hours, $499 (certification included)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;part-iv--certification-optional&#34;&gt;Part IV – Certification (Optional)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;LPIC-1 or Linux Foundation LFCS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;part-v--computer-science-fundamentals&#34;&gt;Part V – Computer Science Fundamentals&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Harvard&amp;rsquo;s CS50x via edX (can begin after employment)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Total cost: ~$1,030. Time: 2–4 months full-time or 6–12 months part-time. Prerequisites: Basic computer literacy.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CFEngine Enterprise: Enabling Postgres Query Logging</title>
+      <link>https://verticalsysadmin.com/blog/2016-04-29-cfengine-enterprise-enabling-postgres-query-logging/</link>
+      <pubDate>Fri, 29 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2016-04-29-cfengine-enterprise-enabling-postgres-query-logging/</guid>
+      <description>&lt;p&gt;&amp;ldquo;CFEngine Postgres database internals aren&amp;rsquo;t widely documented.&amp;rdquo; Enabling query logging reveals what SQL commands the Mission Portal sends to the database.&lt;/p&gt;
+&lt;h2 id=&#34;steps&#34;&gt;Steps&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Check /var/cfengine/state/pg/data/postgresql.conf for the log_statement parameter (default: none)&lt;/li&gt;
+&lt;li&gt;Uncomment and change to log_statement = all&lt;/li&gt;
+&lt;li&gt;Reload config: SELECT pg_reload_conf(); in psql&lt;/li&gt;
+&lt;li&gt;Perform operations in Mission Portal UI&lt;/li&gt;
+&lt;li&gt;Review logs in /var/cfengine/postgresql.log&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    <item>
+      <title>CFEngine and Ansible are complementary</title>
+      <link>https://verticalsysadmin.com/blog/2016-02-18-cfengine-and-ansible-are-complementary/</link>
+      <pubDate>Thu, 18 Feb 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2016-02-18-cfengine-and-ansible-are-complementary/</guid>
+      <description>&lt;p&gt;CFEngine and Ansible serve different purposes and work well together.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CFEngine strength:&lt;/strong&gt; Ongoing maintenance and verification of desired state. Example: CFEngine Enterprise report revealed CliQr version distribution across all systems almost instantly.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ansible strength:&lt;/strong&gt; Ad-hoc, one-time checks. Example: quickly verify whether a specific symlink existed across all hosts in preparation for a CliQr upgrade.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Complementary use:&lt;/strong&gt; CFEngine keeps servers patched continuously; Ansible handles targeted actions like rebooting specific server groups during scheduled maintenance windows.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>LOPSA Mentorship Program Protégé Ionut Cadariu Earns RHCE</title>
+      <link>https://verticalsysadmin.com/blog/2015-10-17-lopsa-mentorship-program-protege-ionut-cadariu-earns-rhce/</link>
+      <pubDate>Sat, 17 Oct 2015 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2015-10-17-lopsa-mentorship-program-protege-ionut-cadariu-earns-rhce/</guid>
+      <description>&lt;p&gt;Aleksey shared a letter from mentee Ionut Cadariu (based in Romania), who wrote to express gratitude after achieving his goal of becoming a Red Hat Certified Engineer:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;I finally achieved my long term objective -&amp;gt; to be Red Hat Certified Engineer…it was a long journey and I wanted to thank you for all the hard work you did with me in order to achieve this.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Aleksey described the letter as making him &amp;ldquo;ridiculously happy.&amp;rdquo; Cadariu consistently completed work, responded promptly, and maintained an appreciative attitude. Aleksey congratulated him and encouraged him to pursue CCNA next, recommending physical networking equipment practice and GNS3 simulation software in the interim.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Senior Sysadmin becomes Director of Operations: Retrospective on Seven Years in Digital Cinema</title>
+      <link>https://verticalsysadmin.com/blog/2015-08-16-senior-sysadmin-becomes-director/</link>
+      <pubDate>Sun, 16 Aug 2015 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2015-08-16-senior-sysadmin-becomes-director/</guid>
+      <description>&lt;p&gt;Career transition from Senior Systems Administrator to Director of Production Systems at Deluxe Digital Cinema in Burbank (June 2013 – September 2014).&lt;/p&gt;
+&lt;p&gt;Managed Alchemy, a theatrical booking and delivery system. The company was shuttering a Hollywood film lab, relocating from LA to Las Vegas, and simultaneously migrating services from London.&lt;/p&gt;
+&lt;h2 id=&#34;major-accomplishments&#34;&gt;Major Accomplishments&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Expanded ops team from 2 to 5 staff by creating Infrastructure and Application Operations departments&lt;/li&gt;
+&lt;li&gt;Established organizational structures documenting functions and responsibilities&lt;/li&gt;
+&lt;li&gt;Built comprehensive knowledge base ensuring full staff competency&lt;/li&gt;
+&lt;li&gt;Implemented process tooling, automation, and ticketing systems&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After completing migrations and achieving full industry adoption of digital cinema, departed to pursue new opportunities.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CFEngine Bootstrapping Primer</title>
+      <link>https://verticalsysadmin.com/blog/2015-07-09-cfengine-bootstrapping-primer/</link>
+      <pubDate>Thu, 09 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2015-07-09-cfengine-bootstrapping-primer/</guid>
+      <description>&lt;h2 id=&#34;key-definitions&#34;&gt;Key Definitions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Managed server:&lt;/strong&gt; A server controlled by CFEngine within a fleet&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Policy server:&lt;/strong&gt; Distributes configuration policy centrally to managed servers&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hub:&lt;/strong&gt; Commercial CFEngine component collecting reports via Web UI&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bootstrapping:&lt;/strong&gt; Establishes secure connections enabling policy downloads and report collection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bootstrap command: &lt;code&gt;cf-agent -B 1.2.3.4&lt;/code&gt; — accepts the policy server&amp;rsquo;s cryptographic key.&lt;/p&gt;
+&lt;h2 id=&#34;architecture&#34;&gt;Architecture&lt;/h2&gt;
+&lt;p&gt;Pull-based — managed nodes pull policy from servers; hubs pull reports from managed nodes. cf-serverd handles inter-node communication on TCP port 5308.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Can CFEngine Compare Server Configurations?</title>
+      <link>https://verticalsysadmin.com/blog/2015-05-28-can-cfengine-compare-server-configurations/</link>
+      <pubDate>Thu, 28 May 2015 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2015-05-28-can-cfengine-compare-server-configurations/</guid>
+      <description>&lt;p&gt;Addresses whether CFEngine can report configuration drift by comparing a baseline server to others.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;Comparing existing servers is the hard way to go about getting consistency.&amp;rdquo; Personal anecdote from 2000 at EarthLink: faced performance variations across eight mail relay servers despite having a build procedure. After extensive analysis, found numerous differences but no clear cause for the performance gap — which ultimately led to exploring CFEngine.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Key insight:&lt;/strong&gt; &amp;ldquo;The CFEngine Way is to model the desired configuration in policy; CFEngine will converge your infrastructure to that configuration.&amp;rdquo; Use CFEngine Enterprise&amp;rsquo;s reporting to monitor compliance and identify non-compliant systems efficiently.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>LOPSA-LA/CFEngine-LA Help Thomas Shin Get a Job at Amazon</title>
+      <link>https://verticalsysadmin.com/blog/2015-04-24-lopsa-la-cfengine-la-help-thomas-shin-get-job-at-amazon/</link>
+      <pubDate>Fri, 24 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2015-04-24-lopsa-la-cfengine-la-help-thomas-shin-get-job-at-amazon/</guid>
+      <description>&lt;p&gt;Thomas Shin secured a position at Amazon approximately 18 months prior through a joint meetup event hosted at Amazon&amp;rsquo;s Irvine facility. He subsequently transitioned to Systems Engineer I.&lt;/p&gt;
+&lt;p&gt;Shin&amp;rsquo;s quote: &amp;ldquo;I&amp;rsquo;m in the process of performing a transition to Systems Engineer I. I can honestly say without a doubt that you&amp;rsquo;ve helped me make the biggest leap in my career.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Contributors acknowledged: Amazon (hosting), Brian Bennett (@bahamat) (organizing), Mark Burgess (@markburgess_osl) (presenting).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CFEngine is awesome</title>
+      <link>https://verticalsysadmin.com/blog/2015-04-04-cfengine-is-awesome/</link>
+      <pubDate>Sat, 04 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2015-04-04-cfengine-is-awesome/</guid>
+      <description>&lt;p&gt;References an Enigmabox blog post (agent42, March 2014) where the author found &amp;ldquo;CFEngine is 10 times faster, uses less memory&amp;rdquo; than alternatives, and praised the vendor&amp;rsquo;s responsive support.&lt;/p&gt;
+&lt;p&gt;The author selected CFEngine for its longevity (since 1993) and broad system compatibility. When the author reported a performance bug, CFEngine&amp;rsquo;s creator responded promptly and accelerated the next version&amp;rsquo;s release to get the fix into production.&lt;/p&gt;
+&lt;p&gt;Community acknowledgment: Neil Watson and Ted Zlatanov recognized for contributions and mentorship of new users. &amp;ldquo;CFEngine&amp;rsquo;s technical strengths are matched by its community&amp;rsquo;s character.&amp;rdquo;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Should people who are already using CFEngine 3 attend professional CFEngine training?</title>
+      <link>https://verticalsysadmin.com/blog/2015-04-01-should-cfengine-users-attend-professional-cfengine-training/</link>
+      <pubDate>Wed, 01 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2015-04-01-should-cfengine-users-attend-professional-cfengine-training/</guid>
+      <description>&lt;p&gt;Testimonials from professionals who completed Vertical Sysadmin&amp;rsquo;s CFEngine Policy Writing Workshop:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Linux Platform Architect, Two Sigma Investments:&lt;/strong&gt; &amp;ldquo;I only wish I had taken it when I first started working with CFEngine.&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IT Systems Administrator, PDX, Inc.:&lt;/strong&gt; &amp;ldquo;I certainly could have gained from his teachings and materials greatly at the onset of my learning CFEngine many months ago.&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tools and Automation Engineer, Salesforce:&lt;/strong&gt; &amp;ldquo;Training has helped me improve my troubleshooting skills of CFEngine 3. I have understood some of the design goals and now clearly understand the syntax of CFEngine promises.&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Advice to a junior sysadmin on acquiring certainty in Linux Sys Admin Basics</title>
+      <link>https://verticalsysadmin.com/blog/2013-10-02-advice-to-a-junior-sysadmin-on-acquiring-certainty/</link>
+      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2013-10-02-advice-to-a-junior-sysadmin-on-acquiring-certainty/</guid>
+      <description>&lt;p&gt;For a junior sysadmin who has practical experience but feels uncertain about knowledge gaps: use the Linux Professional Institute&amp;rsquo;s LPIC-1 certification framework as a structured self-assessment.&lt;/p&gt;
+&lt;h2 id=&#34;three-step-method&#34;&gt;Three-Step Method&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Print the LPIC-1 exam requirements page&lt;/li&gt;
+&lt;li&gt;Checkmark topics already understood confidently&lt;/li&gt;
+&lt;li&gt;Study remaining unchecked items systematically, gaining hands-on experience until achieving competency before moving forward&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Purpose: use the certification curriculum as a self-directed learning roadmap, not necessarily to get certified. Knowledge should be validated through actual hands-on work.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configuration Management Tools Need to Be Robust: How NASA Builds Software</title>
+      <link>https://verticalsysadmin.com/blog/2013-06-08-configuration-management-tools-need-to-be-robust/</link>
+      <pubDate>Sat, 08 Jun 2013 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2013-06-08-configuration-management-tools-need-to-be-robust/</guid>
+      <description>&lt;p&gt;Configuration management tools have become essential infrastructure components and must therefore be exceptionally reliable. References Dr. Holzmann&amp;rsquo;s presentation on NASA/JPL software development practices.&lt;/p&gt;
+&lt;p&gt;The argument: as configuration management tools have become foundational to modern infrastructure operations, they deserve the same quality assurance and robustness engineering that aerospace organizations apply to mission-critical systems.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Highlights from LOPSA East 2013 Configuration Management Workflows Panel</title>
+      <link>https://verticalsysadmin.com/blog/2013-05-13-highlights-from-lopsa-east-2013/</link>
+      <pubDate>Mon, 13 May 2013 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2013-05-13-highlights-from-lopsa-east-2013/</guid>
+      <description>&lt;p&gt;Key recommendations from the panel:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Syntax Highlighting &amp;amp; Validation:&lt;/strong&gt; Use syntax highlighters to catch errors early. &amp;ldquo;Color highlighting lets you save time and trouble by catching errors early in the development process.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Version Control Integration:&lt;/strong&gt; Pre-commit hooks to validate syntax. Jenkins for syntax-checking new commits. knife-spork from Etsy as a workflow solution for teams managing shared Chef repositories.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Code Review:&lt;/strong&gt; Gerrit recommended as a Git-based web interface for code review.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CFEngine claims to be comprehensive. There are 478 unique promise attributes in CFEngine 3.4.0.</title>
+      <link>https://verticalsysadmin.com/blog/2012-12-02-cfengine-478-unique-promise-attributes/</link>
+      <pubDate>Sun, 02 Dec 2012 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2012-12-02-cfengine-478-unique-promise-attributes/</guid>
+      <description>&lt;p&gt;CFEngine 3.4.0 has 478 unique promise attributes enabling administrators to model nearly any aspect of system configuration. The platform addresses knowledge management challenges through features that &amp;ldquo;allow you to summarize and abstract the underlying low-level detail.&amp;rdquo;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Idempotence vs Convergence in Configuration Management</title>
+      <link>https://verticalsysadmin.com/blog/2012-11-08-idempotence-vs-convergence-in-configuration-management/</link>
+      <pubDate>Thu, 08 Nov 2012 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2012-11-08-idempotence-vs-convergence-in-configuration-management/</guid>
+      <description>&lt;p&gt;Cites Diego Zamboni (author of &amp;ldquo;Learning CFEngine 3&amp;rdquo;):&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Idempotence is an operation that leaves the system unmodified if already in the desired state, whereas convergence is the property of a system of not making unnecessary changes.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Key distinction:&lt;/strong&gt; Idempotence focuses on individual operation behavior — repeated execution causes no additional changes. Convergence emphasizes system-level efficiency — avoiding unnecessary operations altogether.&lt;/p&gt;
+&lt;p&gt;CFEngine prioritizes convergence over idempotence, incorporating built-in logic to automatically prevent superfluous operations.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Making Conference Posters</title>
+      <link>https://verticalsysadmin.com/blog/2012-08-14-making-conference-posters/</link>
+      <pubDate>Tue, 14 Aug 2012 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2012-08-14-making-conference-posters/</guid>
+      <description>&lt;p&gt;Encourages professionals who share their work to consider presenting conference posters. References Colin Purrington&amp;rsquo;s guide on academic poster design, described as &amp;ldquo;full of useful tips and is funny and passionate.&amp;rdquo; At a certain career stage, sharing work through conference presentations becomes relevant.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Guide to CFEngine 3 Body of Knowledge</title>
+      <link>https://verticalsysadmin.com/blog/2011-09-22-guide-to-cfengine-3-body-of-knowledge/</link>
+      <pubDate>Thu, 22 Sep 2011 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2011-09-22-guide-to-cfengine-3-body-of-knowledge/</guid>
+      <description>&lt;p&gt;Organized learning resources for CFEngine 3.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Getting started:&lt;/strong&gt; CFEngine Quickstart, then &amp;ldquo;CFEngine 3 Concept Guide&amp;rdquo; (system automation fundamentals, components, knowledge management principles).&lt;/p&gt;
+&lt;h2 id=&#34;core-documentation&#34;&gt;Core Documentation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Glossary of Terms&lt;/li&gt;
+&lt;li&gt;Tutorial: system automation, components, bodies/bundles, initial promises, network services&lt;/li&gt;
+&lt;li&gt;Best Practices Guide: policy style, quality assurance&lt;/li&gt;
+&lt;li&gt;Troubleshooting Guide: apparent hangs, memory concerns&lt;/li&gt;
+&lt;li&gt;Solutions Guide: from basic (file copying) to advanced (PXE boot configuration)&lt;/li&gt;
+&lt;li&gt;Reference Manual: auto-generated from source code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;learning-materials&#34;&gt;Learning Materials&lt;/h2&gt;
+&lt;p&gt;Mark Burgess&amp;rsquo;s four-part video series; Neil Watson&amp;rsquo;s practical examples and cookbook.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Which Open Source Configuration Management Tool Should I Use?</title>
+      <link>https://verticalsysadmin.com/blog/2011-09-15-which-open-source-configuration-management-tool-should-i-use/</link>
+      <pubDate>Thu, 15 Sep 2011 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2011-09-15-which-open-source-configuration-management-tool-should-i-use/</guid>
+      <description>&lt;p&gt;Curated resources for selecting a configuration management tool:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&amp;ldquo;Getting Started with Configuration Management&amp;rdquo; (USENIX ;login:, April 2011) — technical and social considerations&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Configuration Management Summit&amp;rdquo; (USENIX ;login:, October 2010) — comparative overview of Bcfg2, CFEngine, Chef, and Puppet&lt;/li&gt;
+&lt;li&gt;Configuration Management Summit Full Report — extended analysis with detailed tool comparisons&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;A Survey of System Configuration Tools&amp;rdquo; (LISA 2010) — framework for evaluating tools based on environment needs&lt;/li&gt;
+&lt;li&gt;Wikipedia&amp;rsquo;s Comparison of Configuration Management Software — tabular summary&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Puppet and CFEngine compared: time and resource consumption&amp;rdquo; (2010) — CFEngine&amp;rsquo;s superior performance&lt;/li&gt;
+&lt;li&gt;Additional resources on CFEngine&amp;rsquo;s memory footprint, file editing capabilities, Chef documentation&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    <item>
+      <title>Give Your Sysadmin Career a Boost with the LOPSA Mentorship Program</title>
+      <link>https://verticalsysadmin.com/blog/2010-09-22-give-your-sysadmin-career-a-boost-with-lopsa-mentorship-program/</link>
+      <pubDate>Wed, 22 Sep 2010 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2010-09-22-give-your-sysadmin-career-a-boost-with-lopsa-mentorship-program/</guid>
+      <description>&lt;p&gt;LOPSA (League of Professional System Administrators) mentorship initiative — volunteer-driven, connecting experienced sysadmins with aspiring professionals.&lt;/p&gt;
+&lt;p&gt;Mentors help &amp;ldquo;define the project goals, then let them work independently,&amp;rdquo; acting as coaches. Projects should have clear endpoints (e.g., setting up specific infrastructure or services).&lt;/p&gt;
+&lt;p&gt;Proteges describe their desired projects in one paragraph, get matched with mentors, and submit brief project summaries upon completion.&lt;/p&gt;
+&lt;p&gt;About LOPSA: independent nonprofit, Mount Laurel, NJ. Phone: 856-439-0500 or 800-285-2141. Mentorship can develop &amp;ldquo;professional relationships that can last a lifetime.&amp;rdquo;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Comments welcome – please email me</title>
+      <link>https://verticalsysadmin.com/blog/2010-09-15-hello-world/</link>
+      <pubDate>Wed, 15 Sep 2010 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2010-09-15-hello-world/</guid>
+      <description>&lt;p&gt;The inaugural blog post. Comments welcome — please email &lt;a href=&#34;mailto:aleksey@verticalsysadmin.com&#34;&gt;aleksey@verticalsysadmin.com&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Getting started with Infrastructure As Code</title>
+      <link>https://verticalsysadmin.com/blog/2010-09-15-getting-started-with-infrastructure-as-code/</link>
+      <pubDate>Wed, 15 Sep 2010 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2010-09-15-getting-started-with-infrastructure-as-code/</guid>
+      <description>&lt;p&gt;Following a conversation with John Willis of Chef/OpsCode at Ohio Linux Fest (where the author had taught an introductory Cfengine 3 class), the author became enthusiastic about Infrastructure as Code.&lt;/p&gt;
+&lt;p&gt;Initial project: &amp;ldquo;I will roll out a new VM, completely configured by Cfengine, and the new application, also installed by Cfengine.&amp;rdquo; Test in staging (ephemeral infrastructure), verify no additional manual steps needed, then discard the VM and replicate in production.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Misc. Sys Admin Resources</title>
+      <link>https://verticalsysadmin.com/blog/2010-09-15-misc-sys-admin-resources/</link>
+      <pubDate>Wed, 15 Sep 2010 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2010-09-15-misc-sys-admin-resources/</guid>
+      <description>&lt;p&gt;Links to two technical references:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&amp;ldquo;Nutshell Comparison of PCI, PCI-X and PCI Express&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Unix Flight Recorder&amp;rdquo;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;A short curated list of external technical references.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Recommended Reading</title>
+      <link>https://verticalsysadmin.com/blog/2010-09-15-recommended-reading/</link>
+      <pubDate>Wed, 15 Sep 2010 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2010-09-15-recommended-reading/</guid>
+      <description>&lt;p&gt;Recommending &amp;ldquo;The Practice of System and Network Administration&amp;rdquo; — an essential reference for system administrators at all levels.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Relative Origin of Cfengine, Puppet and Chef</title>
+      <link>https://verticalsysadmin.com/blog/2010-09-15-relative-origins-of-cfengine-chef-and-puppet/</link>
+      <pubDate>Wed, 15 Sep 2010 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2010-09-15-relative-origins-of-cfengine-chef-and-puppet/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Cfengine:&lt;/strong&gt; Pioneered configuration description languages for Unix, introduced &amp;ldquo;classes&amp;rdquo; for conditional logic. Version 2 added convergence and self-healing.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Puppet:&lt;/strong&gt; Luke Kanies, a power Cfengine 2 user, created it to address his frustrations. &amp;ldquo;Graph-based and model-driven&amp;rdquo; with a &amp;ldquo;simple DSL language (designed to be simple, safe and human readable)&amp;rdquo; plus Ruby extensions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Chef:&lt;/strong&gt; Adam Jacobs, dissatisfied with Puppet&amp;rsquo;s non-deterministic default execution ordering, built Chef with &amp;ldquo;tightly ordered&amp;rdquo; sequence control. Innovative cloud provisioning for VM instantiation and automated configuration. Originated in the Ruby-on-Rails cloud ecosystem.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About Aleksey Tsalolikhin</title>
+      <link>https://verticalsysadmin.com/about/aleksey/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/about/aleksey/</guid>
+      <description>Aleksey Tsalolikhin, CEO and Principal Architect of Vertical Sysadmin, Inc.</description>
+    </item>
+    <item>
+      <title>AWS</title>
+      <link>https://verticalsysadmin.com/training/aws/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/training/aws/</guid>
+      <description>AWS training from Vertical Sysadmin, Inc.</description>
+    </item>
+    <item>
+      <title>CFEngine Professional Services</title>
+      <link>https://verticalsysadmin.com/training/cfengine-professional-services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/training/cfengine-professional-services/</guid>
+      <description>CFEngine professional services from Vertical Sysadmin, Inc.</description>
+    </item>
+    <item>
+      <title>CFEngine Training</title>
+      <link>https://verticalsysadmin.com/training/cfengine/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/training/cfengine/</guid>
+      <description>A comprehensive 5-day CFEngine 3 training course for system administrators.</description>
+    </item>
+    <item>
+      <title>Chef</title>
+      <link>https://verticalsysadmin.com/training/chef/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/training/chef/</guid>
+      <description>Chef training from Vertical Sysadmin, Inc.</description>
+    </item>
+    <item>
+      <title>Communication Skills</title>
+      <link>https://verticalsysadmin.com/training/communication-skills/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/training/communication-skills/</guid>
+      <description>Communication skills training from Vertical Sysadmin, Inc.</description>
+    </item>
+    <item>
+      <title>Development Fundamentals</title>
+      <link>https://verticalsysadmin.com/training/development-fundamentals/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/training/development-fundamentals/</guid>
+      <description>Development fundamentals training from Vertical Sysadmin, Inc.</description>
+    </item>
+    <item>
+      <title>DevOps Fundamentals</title>
+      <link>https://verticalsysadmin.com/training/devops-fundamentals/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/training/devops-fundamentals/</guid>
+      <description>DevOps fundamentals training from Vertical Sysadmin, Inc.</description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>https://verticalsysadmin.com/training/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/training/docker/</guid>
+      <description>Docker training from Vertical Sysadmin, Inc.</description>
+    </item>
+    <item>
+      <title>Git Foundations – From Novice to Guru</title>
+      <link>https://verticalsysadmin.com/training/git-foundations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/training/git-foundations/</guid>
+      <description>A comprehensive 5-day Git training course covering fundamentals through advanced usage.</description>
+    </item>
+    <item>
+      <title>GitLab CI/CD</title>
+      <link>https://verticalsysadmin.com/training/gitlab-ci/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/training/gitlab-ci/</guid>
+      <description>Learn to implement GitLab-driven CI/CD pipelines in this 1-day course.</description>
+    </item>
+    <item>
+      <title>Kubernetes</title>
+      <link>https://verticalsysadmin.com/training/kubernetes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/training/kubernetes/</guid>
+      <description>Kubernetes training from Vertical Sysadmin, Inc.</description>
+    </item>
+    <item>
+      <title>Linux System Administration</title>
+      <link>https://verticalsysadmin.com/training/linux-system-administration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/training/linux-system-administration/</guid>
+      <description>Linux system administration training from Vertical Sysadmin, Inc.</description>
+    </item>
+    <item>
+      <title>Our Team</title>
+      <link>https://verticalsysadmin.com/about/team/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/about/team/</guid>
+      <description>Meet the Vertical Sysadmin team.</description>
+    </item>
+    <item>
+      <title>Secure C/C&#43;&#43; Programming</title>
+      <link>https://verticalsysadmin.com/training/secure-c-programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/training/secure-c-programming/</guid>
+      <description>Secure C/C&#43;&#43; programming training from Vertical Sysadmin, Inc.</description>
+    </item>
+    <item>
+      <title>Shell Basics: Under the Hood</title>
+      <link>https://verticalsysadmin.com/training/shell-basics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/training/shell-basics/</guid>
+      <description>A 1-day course demystifying shell fundamentals for all experience levels.</description>
+    </item>
+  </channel>
+</rss>

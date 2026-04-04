@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Virtual-Box on Vertical Sysadmin, Inc.</title>
+    <link>https://verticalsysadmin.com/tags/virtual-box/</link>
+    <description>Recent content in Virtual-Box on Vertical Sysadmin, Inc.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 13 Nov 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://verticalsysadmin.com/tags/virtual-box/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting up a Postgres Sandbox</title>
+      <link>https://verticalsysadmin.com/blog/2016-11-13-setting-up-a-postgres-sandbox/</link>
+      <pubDate>Sun, 13 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/blog/2016-11-13-setting-up-a-postgres-sandbox/</guid>
+      <description>&lt;p&gt;Demonstrates creating a reproducible PostgreSQL development environment using Vagrant and VirtualBox.&lt;/p&gt;
+&lt;h2 id=&#34;steps&#34;&gt;Steps&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Install Vagrant and VirtualBox&lt;/li&gt;
+&lt;li&gt;Choose a base image (puppetlabs/centos-6.6-64-nocm)&lt;/li&gt;
+&lt;li&gt;Create a directory and initialize Vagrant&lt;/li&gt;
+&lt;li&gt;Download PostgreSQL 9.3 repository packages via wget, store RPMs in /vagrant/packages for persistence&lt;/li&gt;
+&lt;li&gt;Modify the Vagrantfile to automate database initialization&lt;/li&gt;
+&lt;li&gt;Destroy and recreate the VM to verify reproducibility&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The automation script initializes PostgreSQL, creates a vagrant user with appropriate permissions, and enables the service. Users can then access PostgreSQL via psql. The approach allows repeating &amp;ldquo;destroy VM, bring it up, and start psql&amp;rdquo; as often as needed for a clean slate.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

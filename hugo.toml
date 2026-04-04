@@ -1,0 +1,47 @@
+baseURL = "https://verticalsysadmin.com/"
+languageCode = "en-us"
+title = "Vertical Sysadmin, Inc."
+theme = "PaperMod"
+paginate = 10
+
+[params]
+  author = "Aleksey Tsalolikhin"
+  description = "Achieve real learning — technology training and consulting services"
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+
+  [params.homeInfoParams]
+    Title = "Achieve real learning"
+    Content = "Vertical Sysadmin, Inc. increases the competence of professionals supporting the IT fabric of modern civilization. We provide state-of-the-art technology **[training](/training/)** and **[consulting](/consulting/)** services.\n\n📞 +1 (323) 393-0779 · ✉️ hello@verticalsysadmin.com · 📍 Marble Falls, TX 78654"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:hello@verticalsysadmin.com"
+
+[menu]
+  [[menu.main]]
+    name = "Training"
+    url = "/training/"
+    weight = 10
+  [[menu.main]]
+    name = "Consulting"
+    url = "/consulting/"
+    weight = 20
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 30
+  [[menu.main]]
+    name = "Resources"
+    url = "/resources/"
+    weight = 40
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 50
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 60

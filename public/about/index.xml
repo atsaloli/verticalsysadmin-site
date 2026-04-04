@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>About Us on Vertical Sysadmin, Inc.</title>
+    <link>https://verticalsysadmin.com/about/</link>
+    <description>Recent content in About Us on Vertical Sysadmin, Inc.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://verticalsysadmin.com/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Aleksey Tsalolikhin</title>
+      <link>https://verticalsysadmin.com/about/aleksey/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/about/aleksey/</guid>
+      <description>Aleksey Tsalolikhin, CEO and Principal Architect of Vertical Sysadmin, Inc.</description>
+    </item>
+    <item>
+      <title>Our Team</title>
+      <link>https://verticalsysadmin.com/about/team/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://verticalsysadmin.com/about/team/</guid>
+      <description>Meet the Vertical Sysadmin team.</description>
+    </item>
+  </channel>
+</rss>
