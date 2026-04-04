@@ -13,8 +13,8 @@ Vertical Sysadmin is an authorized [GitLab](https://www.gitlab.com/) reseller an
 
 As an authorized [reseller](https://about.gitlab.com/resellers/) and [training partner](https://about.gitlab.com/resellers/), we offer:
 
-- **[Git Foundations](/training/git-foundations/)** — our flagship 5-day course covering Git and GitLab
-- **[GitLab CI/CD](/training/gitlab-ci/)** — 1-day focused CI/CD pipeline course
+- **[Git Foundations](../git-foundations/)** — our flagship 5-day course covering Git and GitLab
+- **[GitLab CI/CD](../gitlab-ci/)** — 1-day focused CI/CD pipeline course
 - **[GitLab Enterprise Edition](https://about.gitlab.com/features/#enterprise)** reseller services
 
 ## Clients Trained

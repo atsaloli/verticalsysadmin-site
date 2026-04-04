@@ -3,7 +3,6 @@ languageCode = "en-us"
 title = "Vertical Sysadmin, Inc."
 theme = "PaperMod"
 paginate = 10
-relativeURLs = true
 
 [params]
   author = "Aleksey Tsalolikhin"
@@ -15,7 +14,7 @@ relativeURLs = true
 
   [params.homeInfoParams]
     Title = "Achieve real learning"
-    Content = "Vertical Sysadmin, Inc. increases the competence of professionals supporting the IT fabric of modern civilization. We provide state-of-the-art technology **[training](/training/)** and **[consulting](/consulting/)** services.\n\n📞 +1 (323) 393-0779 · ✉️ hello@verticalsysadmin.com · 📍 Marble Falls, TX 78654"
+    Content = "Vertical Sysadmin, Inc. increases the competence of professionals supporting the IT fabric of modern civilization. We provide state-of-the-art technology **[training](training/)** and **[consulting](consulting/)** services.\n\n📞 +1 (323) 393-0779 · ✉️ hello@verticalsysadmin.com · 📍 Marble Falls, TX 78654"
 
   [[params.socialIcons]]
     name = "email"
