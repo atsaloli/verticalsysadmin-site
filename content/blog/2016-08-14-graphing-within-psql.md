@@ -4,7 +4,7 @@ date: 2016-08-14
 author: "Aleksey Tsalolikhin"
 ---
 
-Demonstrates creating graphs from SQL query results directly within psql using gnuplot, without leaving the interface.
+Demonstrates creating graphs from SQL query results directly within [psql](http://postgresguide.com/utilities/psql.html) using [gnuplot](http://www.gnuplot.info/), without leaving the interface. Originally discussed on [Hacker News](https://news.ycombinator.com/item?id=5215040).
 
 **Client-side method (Ian Barwick):** Consolidates preparation steps into a psql script:
 

@@ -7,18 +7,18 @@ Vertical Sysadmin participates actively in the technology community as members a
 
 ## Conferences We Participate In
 
-- Cascadia IT Conference
-- DevOps Days Los Angeles
-- IBM SHARE
-- LayerOne (Information security conference)
-- LinuxCon North America
-- Ohio Linuxfest
-- PGDay Denver
-- PgWest (PostgreSQL conference)
-- Professional IT Community Conference
-- ShellCon (Information security conference)
-- Southern California Linux Expo (SCaLE)
-- USENIX ATC
-- USENIX LISA
+- [Cascadia IT Conference](https://casitconf.org)
+- [DevOps Days Los Angeles](https://www.devopsdays.org)
+- [IBM SHARE](https://www.share.org/)
+- [LayerOne](https://www.layerone.org/) (Information security conference)
+- [LinuxCon North America](https://events.linuxfoundation.org/)
+- [Ohio Linuxfest](https://ohiolinux.org/)
+- [PGDay Denver](https://www.postgresql.org/about/events/)
+- [PgWest](http://www.postgresqlconference.org/) (PostgreSQL conference)
+- [Professional IT Community Conference](https://lopsa.org/Events)
+- [ShellCon](https://shellcon.io/) (Information security conference)
+- [Southern California Linux Expo (SCaLE)](http://www.socallinuxexpo.org)
+- [USENIX ATC](https://www.usenix.org/conferences/byname/131)
+- [USENIX LISA](https://www.usenix.org/conferences/byname/5)
 
 Our staff serve as speakers, trainers, and organizers at these community events, sharing expertise across infrastructure, DevOps, security, Linux, and database technologies.

@@ -6,7 +6,7 @@ author: "Aleksey Tsalolikhin"
 
 Career transition from Senior Systems Administrator to Director of Production Systems at Deluxe Digital Cinema in Burbank (June 2013 – September 2014).
 
-Managed Alchemy, a theatrical booking and delivery system. The company was shuttering a Hollywood film lab, relocating from LA to Las Vegas, and simultaneously migrating services from London.
+Managed Alchemy, a theatrical booking and delivery system. The company was [shuttering a Hollywood film lab](http://www.hollywoodreporter.com/behind-screen/deluxes-hollywood-film-lab-close-686600), relocating from LA to Las Vegas, and simultaneously migrating services from London.
 
 ## Major Accomplishments
 
@@ -16,3 +16,5 @@ Managed Alchemy, a theatrical booking and delivery system. The company was shutt
 - Implemented process tooling, automation, and ticketing systems
 
 After completing migrations and achieving full industry adoption of digital cinema, departed to pursue new opportunities.
+
+Further reading: [Ops Report Card](http://www.opsreportcard.com/) and [A Sysadmin's Guide to Navigating the Business World](https://www.usenix.org/lisa/books/sysadmins-guide-navigating-business-world).

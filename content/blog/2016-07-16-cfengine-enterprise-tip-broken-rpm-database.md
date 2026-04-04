@@ -16,3 +16,8 @@ order by changetimestamp;
 ```
 
 Searches the past 24 hours of promise executions for log messages containing "rpm" and "db3", returning hostnames and timestamps.
+
+## Further Reading
+
+- [Red Hat: How to fix a corrupted RPM database](https://access.redhat.com/solutions/6903)
+- [Rebuilding corrupted RPM database](http://www.cyberciti.biz/tips/rebuilding-corrupted-rpm-database.html)

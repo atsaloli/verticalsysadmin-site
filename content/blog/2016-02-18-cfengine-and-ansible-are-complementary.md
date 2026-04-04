@@ -6,7 +6,7 @@ author: "Aleksey Tsalolikhin"
 
 CFEngine and Ansible serve different purposes and work well together.
 
-**CFEngine strength:** Ongoing maintenance and verification of desired state. Example: CFEngine Enterprise report revealed CliQr version distribution across all systems almost instantly.
+**CFEngine strength:** Ongoing maintenance and verification of desired state. Example: CFEngine Enterprise report revealed [CliQr](http://www.cliqr.com) version distribution across all systems almost instantly.
 
 **Ansible strength:** Ad-hoc, one-time checks. Example: quickly verify whether a specific symlink existed across all hosts in preparation for a CliQr upgrade.
 

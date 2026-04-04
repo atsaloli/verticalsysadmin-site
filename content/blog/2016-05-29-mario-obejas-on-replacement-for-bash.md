@@ -4,7 +4,7 @@ date: 2016-05-29
 author: "Aleksey Tsalolikhin"
 ---
 
-Mario Obejas (34 years of industry experience) responded to a LOPSA-tech mailing list discussion on bash alternatives.
+[Mario Obejas](https://www.linkedin.com/in/mario-obejas-77b78a5) (34 years of industry experience) responded to a [LOPSA-tech mailing list discussion](https://lists.lopsa.org/pipermail/tech/2016-May/017624.html) on bash alternatives.
 
 **On bash replacement:** Bash will likely only be replaced by an improved iteration (as bash replaced sh, vim replaced vi). "Bash works well enough for a lot of production work." Any successor must leverage existing widely-held skill sets.
 

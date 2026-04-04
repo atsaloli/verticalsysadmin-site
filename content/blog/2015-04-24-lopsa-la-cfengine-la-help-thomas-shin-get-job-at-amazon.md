@@ -8,4 +8,6 @@ Thomas Shin secured a position at Amazon approximately 18 months prior through a
 
 Shin's quote: "I'm in the process of performing a transition to Systems Engineer I. I can honestly say without a doubt that you've helped me make the biggest leap in my career."
 
-Contributors acknowledged: Amazon (hosting), Brian Bennett (@bahamat) (organizing), Mark Burgess (@markburgess_osl) (presenting).
+Contributors acknowledged: Amazon (hosting), Brian Bennett ([@bahamat](https://twitter.com/bahamat)) (organizing), Mark Burgess ([@markburgess_osl](https://twitter.com/markburgess_osl)) (presenting).
+
+The event was co-hosted by [LOPSA-LA](http://www.meetup.com/lopsala/) and [CFEngine-LA](http://www.meetup.com/cfengine-la/).

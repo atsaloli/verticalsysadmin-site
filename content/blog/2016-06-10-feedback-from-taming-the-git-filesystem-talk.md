@@ -4,7 +4,7 @@ date: 2016-06-10
 author: "Aleksey Tsalolikhin"
 ---
 
-Mike Weilgart planned to repeat his "Taming the Git Filesystem" presentation on June 23rd in Burbank, following its debut on June 2nd at the UUASC-LA/LOPSA-LA meetup.
+Mike Weilgart planned to repeat his "Taming the Git Filesystem" presentation on [June 23rd in Burbank](http://www.meetup.com/lopsala/events/231717204/), following its debut on June 2nd at the UUASC-LA/LOPSA-LA meetup.
 
 ## Attendee Feedback
 

@@ -8,7 +8,7 @@ For a junior sysadmin who has practical experience but feels uncertain about kno
 
 ## Three-Step Method
 
-1. Print the LPIC-1 exam requirements page
+1. Print the [LPIC-1 exam requirements](http://www.lpi.org/linux-certifications/programs/lpic-1/exam-101) page
 2. Checkmark topics already understood confidently
 3. Study remaining unchecked items systematically, gaining hands-on experience until achieving competency before moving forward
 
