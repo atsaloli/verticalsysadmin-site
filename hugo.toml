@@ -4,6 +4,10 @@ title = "Vertical Sysadmin, Inc."
 theme = "PaperMod"
 paginate = 10
 
+[permalinks]
+  [permalinks.page]
+    blog = "/blog/:year/:month/:day/:slug/"
+
 [params]
   author = "Aleksey Tsalolikhin"
   description = "Achieve real learning — technology training and consulting services"
