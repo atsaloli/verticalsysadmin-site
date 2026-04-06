@@ -20,11 +20,7 @@ paginate = 10
 
   [params.homeInfoParams]
     Title = "Achieve real learning"
-    Content = "Vertical Sysadmin, Inc. increases the competence of professionals supporting the IT fabric of modern civilization. We provide state-of-the-art technology **[training](training/)** and **[consulting](consulting/)** services.\n\n📞 +1 (323) 393-0779 · ✉️ hello@verticalsysadmin.com · 📍 Marble Falls, TX 78654"
-
-  [[params.socialIcons]]
-    name = "email"
-    url = "mailto:hello@verticalsysadmin.com"
+    Content = "Vertical Sysadmin, Inc. increases the competence of professionals supporting the IT fabric of modern civilization. We provide state-of-the-art technology **[training](training/)** and **[consulting](consulting/)** services.\n\n&nbsp;\n\n📞 +1 (323) 393-0779 · ✉️ hello@verticalsysadmin.com · 📍 Marble Falls, TX 78654"
 
 [menu]
   [[menu.main]]
