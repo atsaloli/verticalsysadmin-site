@@ -6,7 +6,7 @@ paginate = 10
 
 [permalinks]
   [permalinks.page]
-    blog = "/blog/:year/:month/:day/:slug/"
+    blog = "/:year/:month/:day/:slug/"
 
 [params]
   author = "Aleksey Tsalolikhin"
