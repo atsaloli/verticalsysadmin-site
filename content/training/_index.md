@@ -1,6 +1,7 @@
 ---
 title: "Training"
 description: "Technology training courses from Vertical Sysadmin, Inc."
+layout: "single"
 ---
 
 We offer customized onsite courses at client locations. Our training covers:
