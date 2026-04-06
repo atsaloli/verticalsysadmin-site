@@ -1,7 +1,6 @@
 ---
-title: "Comments welcome – please email me"
+title: "Comments welcome - please email me."
 date: 2010-09-15
-author: "Aleksey Tsalolikhin"
 ---
 
-The inaugural blog post. Comments welcome — please email aleksey@verticalsysadmin.com.
+Comments are welcome - please email me: [aleksey@verticalsysadmin.com](mailto:aleksey@verticalsysadmin.com)

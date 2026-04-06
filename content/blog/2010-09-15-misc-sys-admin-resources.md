@@ -1,10 +1,8 @@
 ---
 title: "Misc. Sys Admin Resources"
 date: 2010-09-15
-author: "Aleksey Tsalolikhin"
 ---
 
-A short curated list of external technical references:
+[Nutshell Comparison of PCI, PCI-X and PCI Express](http://www.verticalsysadmin.com/tech/pci.html)  
 
-1. Nutshell Comparison of PCI, PCI-X and PCI Express
-2. Unix Flight Recorder
+[Unix Flight Recorder](http://www.verticalsysadmin.com/tech/ufr.html)
