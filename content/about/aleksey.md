@@ -14,4 +14,4 @@ He founded Vertical Sysadmin to deliver effective training in excellent technolo
 - UUASC-LA panel (October 1, 2009) on CFEngine, Chef, and Puppet
 - September 2, 2010 CFEngine 3 presentation to UUASC-LA
 
-📞 +1 (323) 393-0779 · ✉️ hello@verticalsysadmin.com
+📞 +1 (323) 393-0779 · ✉️ hello@verticalsysadmin.com · [Resume (PDF)](/resume/aleksey-tsalolikhin-resume.pdf)
