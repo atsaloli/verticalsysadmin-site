@@ -1,6 +1,8 @@
 ---
 title: "Guide to CFEngine 3 Body of Knowledge"
 date: 2011-09-22
+aliases:
+  - /guide-to-cfengine-3-body-of-knowledge/
 ---
 
 Purpose: There is a lot to know about CFEngine, which can make it hard for people new to the subject.  The purpose of this guide is to lay out the resources available to CFEngine students and to orient them to this body of knowledge to speed their journey into practical system automation with CFEngine 3.
